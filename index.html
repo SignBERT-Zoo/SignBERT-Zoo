@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SignBERT+_hand_model_aware_self_supervised_pre_training_for_sign_language_understanding.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SignBERT+</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/ustc.gif">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title", style="font-size: 42px">SignBERT+: Hand-model-aware Self-supervised Pre-training for Sign Language Understanding</h1>
+          <h2 class="is-size-5">IEEE TPAMI 2023</h2>
+          <br></br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://dblp.org/pid/273/3660.html">Hezhen Hu</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=v-ASmMIAAAAJ&hl=zh-CN">Weichao Zhao</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=8s1JF8YAAAAJ">Wengang Zhou</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=7sFMIKoAAAAJ">Houqiang Li</a>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Science and Technology of China</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10109128"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Overview</h2>
+    </div>
+  </div>
+  <video controls autoplay loop width="760" style="object-fit: contain;grid-column: page;margin:auto">
+    <source src="static/videos/Video.mp4" type="video/mp4">
+  </video>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Hand gesture serves as a crucial role during the expression of sign language. 
+            Current deep learning based methods for sign language understanding (SLU) are prone to over-fitting due 
+            to insufficient sign data resource and suffer limited interpretability.
+          </p>
+          <p>
+            In this paper, we propose the <em>first</em> self-supervised pre-trainable SignBERT+ framework with model-aware hand prior incorporated.
+            In our framework, the hand pose is regarded as a visual token, which is derived from an off-the-shelf detector.
+            Each visual token is embedded with gesture state and spatial-temporal position encoding.
+            To take full advantage of current sign data resource, we first perform self-supervised learning to model its statistics.
+            To this end, we design multi-level masked modeling strategies (joint, frame and clip) to mimic common failure detection cases.
+            Jointly with these masked modeling strategies, we incorporate model-aware hand prior to better capture hierarchical context over the sequence.
+            After the pre-training, we carefully design simple yet effective prediction heads for downstream tasks.
+          </p>
+          <p>
+            To validate the effectiveness of our framework, we perform extensive experiments on three main SLU tasks, involving isolated and continuous sign language recognition (SLR), and sign language translation (SLT).
+            Experimental results demonstrate the effectiveness of our method, achieving new state-of-the-art performance with a notable gain.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Reconstruction Visualization</h2>
+        <div class="content has-text-justified">
+          <p>
+            We perform qualitative reconstruction results on two types of hard cases, <em>i.e.,</em> hand-to-hand interaction and hand-to-face interaction.
+            Even under these hard cases, our framework can rectify the noisy inputs and infer all the poses which well align the image plane.
+            This strong hallucination capability may be largely attributed to the well-modeled statistics in the sign language domain.
+          </p>
+        </div>
+        <div class="publication-image">
+          <img src="static/images/Vis_more2.jpg" width="760" alt="reconstruction results">
+        </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+
+    <!-- Application. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We compare our method with previous state-of-the-art methods on three main downstream tasks, including isolated SLR, continuous SLR and SLT. 
+            For comparison, we group them into pose-based and RGB-based methods.
+          </p>
+          <p>
+            <strong>1. Isolated Sign Language Recognition</strong>
+            <ul>
+              <li> MSASL </li>
+              <div class="publication-image">
+                <img src="static/images/msasl.jpg" width="760" alt="generation results">
+              </div>
+              <li> WLASL </li>
+              <div class="publication-image">
+                <img src="static/images/wlasl.jpg" width="760" alt="generation results">
+              </div>
+            </ul>
+            <strong>2. Continuous Sign Language Recognition</strong>
+            <ul>
+              <li> RWTH-Phoenix </li>
+              <div class="publication-image">
+                <img src="static/images/phoenix_cslr.jpg" width="760" alt="generation results">
+              </div>
+            </ul>
+            <strong>3. Sign Language Translation</strong>
+            <ul>
+              <li> RWTH-PhoneixT </li>
+              <div class="publication-image">
+                <img src="static/images/phoenixT_slt.jpg" width="760" alt="generation results">
+              </div>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Application. -->
+
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{hu2023SignBERT,
+        author={Hu, Hezhen and Zhao, Weichao and Zhou, Wengang and Li, Houqiang},
+        journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+        title={SignBERT+: Hand-model-aware Self-supervised Pre-training for Sign Language Understanding}, 
+        year={2023},
+        pages={1-20}}
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The website code is borrowed from the <a
+                  href="https://github.com/nerfies/nerfies.github.io">source code</a> of Nerfies.
+            We thank the authors for sharing the templates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
